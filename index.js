@@ -31,7 +31,7 @@ const questions = [
       },
     ];
 
-    // function to write README file
+    // function to write SVG file
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, data);
     console.log('Generated logo.svg');
