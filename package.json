@@ -1,0 +1,15 @@
+{
+  "name": "logo-generator",
+  "version": "1.0.0",
+  "description": "dynamically creates a SVG file logo based on user input for shape, text and color",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
