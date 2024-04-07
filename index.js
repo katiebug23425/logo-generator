@@ -58,3 +58,17 @@ function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, data);
     console.log('Generated logo.svg');
   }
+
+  async function init() {
+    var svgString = "";
+	var svgFile = "logo.svg";
+
+    const responses = await inquirer.prompt(questions);
+    var textChosen = '';
+    textChosen = responses.text;
+    textColorChosen = responses['Text Color'];
+    shapeChosen = responses.shape;
+    shapeColorChosen = responses['Shape Color'];
+
+
+  }
