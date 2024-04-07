@@ -1,14 +1,36 @@
+//imports required
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Library = require('./Lib/shapes');
 var prompt = inquirer.createPromptModule();
+
+//class to render shape, text & color
+class svgLogo{
+    constructor(){
+        this.shapeChoice = ''
+        this.textChoice = ''
+    }
+    render(){
+
+        return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${this.shapeChoice}${this.textChoice}</svg>`
+    }
+    setShapeChoice(shape){
+        this.shapeChoice = shape.render()
+    }
+    setTextChoice(text,color){
+        this.text.Choice = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
+
+    }
+    
+}
+
 
 // array of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'Logo Text',
-        message: 'Please enter up to 3 letters and/or characters for your logo text',
+        message: 'Please enter up to 3 characters for your logo text',
       },
 
       {
