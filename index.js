@@ -66,9 +66,13 @@ function writeToFile(fileName, data) {
     const responses = await inquirer.prompt(questions);
     var textChosen = '';
     textChosen = responses.text;
+    console.log("Logo Text: [" + textChosen + "]");
     textColorChosen = responses['Text Color'];
+    console.log("Logo Text Color: [" + textColorChosen + "]");
     shapeChosen = responses.shape;
+    console.log("You Chose This Shape: [" + shape + "]");
     shapeColorChosen = responses['Shape Color'];
+    console.log("Shape Color: [" + shapeColorChosen + "]");
 
 
   }
