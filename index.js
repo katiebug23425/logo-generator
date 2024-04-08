@@ -74,5 +74,23 @@ function writeToFile(fileName, data) {
     shapeColorChosen = responses['Shape Color'];
     console.log("Shape Color: [" + shapeColorChosen + "]");
 
+    let shapeChosen;
+    if(shape === Square) {
+        shapeChosen = new Square();
+        console.log('You have chosen Square as your shape!');
+    } else if(shape === Triangle) {
+        shapeChosen = new Triangle();
+        console.log('You have chosen Triangle as your shape!');
+    } else if(shape === Circle) {
+        shapeChosen = new Circle();
+        console.log('You have chosen Circle as your shape!'); }
+        shapeChosen.setColor(shapeColorChosen);
 
-  }
+        var Svg = new svgLogo();
+        Svg.setTextChoice(textChosen, textColorChosen);
+        Svg.setShapeChoice(shapeChosen);
+        svgString = Svg.render();
+        writeToFile(svgFile, svgString);
+    }
+
+    init()
