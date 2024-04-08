@@ -5,7 +5,7 @@ class Shape {
 
  setColor(color) {
 
-    this.color = color;
+    this.color = (color);
 }
 }
 
