@@ -56,7 +56,7 @@ const questions = [
     // function to write SVG file
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, data);
-    console.log('Generated logo.svg');
+    console.log('You have successfully generated your logo.svg file!');
   }
 
   async function init() {
@@ -93,6 +93,7 @@ function writeToFile(fileName, data) {
         Svg.setTextChoice(textChosen, textColorChosen);
         Svg.setShapeChoice(shapeChosen);
         svgString = Svg.render();
+        console.log('Creating your custom SVG file......')
         writeToFile(svgFile, svgString);
     }
 
