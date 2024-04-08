@@ -1,7 +1,7 @@
 //imports required
 const inquirer = require('inquirer');
 const fs = require('fs');
-const {Circle, Square, Triangle} = require('./Lib/shapes');
+const {Circle, Square, Triangle,} = require('./Lib/shapes');
 var prompt = inquirer.createPromptModule();
 
 //class to render shape, text & color
@@ -65,23 +65,23 @@ function writeToFile(fileName, data) {
 
     const responses = await prompt(questions);
     var textChosen = '';
-    textChosen = responses.text;
+    textChosen = responses['Logo Text'];
     console.log("Logo Text: [" + textChosen + "]");
     textColorChosen = responses['Text Color'];
     console.log("Logo Text Color: [" + textColorChosen + "]");
-    UserShapeChosen = responses.shape;
+    UserShapeChosen = responses['Shape'];
     console.log("You Chose This Shape: [" + UserShapeChosen + "]");
     shapeColorChosen = responses['Shape Color'];
     console.log("Shape Color: [" + shapeColorChosen + "]");
 
     let shapeChosen;
     if(UserShapeChosen === Square) {
-        shapeChosenhapeChosen = new Square();
+        shapeChosen = new Square();
         console.log('You have chosen Square as your shape!');
     } else if(UserShapeChosen === Triangle) {
         shapeChosen = new Triangle();
         console.log('You have chosen Triangle as your shape!');
-    } else if(UserShapeChosen === Circle) {
+    } else if (UserShapeChosen === Circle) {
         shapeChosen = new Circle();
         console.log('You have chosen Circle as your shape!'); }
         shapeChosen.setColor(shapeColorChosen);
