@@ -1,7 +1,7 @@
 //imports required
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Library = require('./Lib/shapes');
+const {Circle, Square, Triangle} = require('./Lib/shapes');
 var prompt = inquirer.createPromptModule();
 
 //class to render shape, text & color
@@ -18,7 +18,7 @@ class svgLogo{
         this.shapeChoice = shape.render()
     }
     setTextChoice(text,color){
-        this.text.Choice = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
+        this.textChoice = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
 
     }
     
@@ -63,25 +63,25 @@ function writeToFile(fileName, data) {
     var svgString = "";
 	var svgFile = "logo.svg";
 
-    const responses = await inquirer.prompt(questions);
+    const responses = await prompt(questions);
     var textChosen = '';
     textChosen = responses.text;
     console.log("Logo Text: [" + textChosen + "]");
     textColorChosen = responses['Text Color'];
     console.log("Logo Text Color: [" + textColorChosen + "]");
-    shapeChosen = responses.shape;
-    console.log("You Chose This Shape: [" + shape + "]");
+    UserShapeChosen = responses.shape;
+    console.log("You Chose This Shape: [" + UserShapeChosen + "]");
     shapeColorChosen = responses['Shape Color'];
     console.log("Shape Color: [" + shapeColorChosen + "]");
 
     let shapeChosen;
-    if(shape === Square) {
-        shapeChosen = new Square();
+    if(UserShapeChosen === Square) {
+        shapeChosenhapeChosen = new Square();
         console.log('You have chosen Square as your shape!');
-    } else if(shape === Triangle) {
+    } else if(UserShapeChosen === Triangle) {
         shapeChosen = new Triangle();
         console.log('You have chosen Triangle as your shape!');
-    } else if(shape === Circle) {
+    } else if(UserShapeChosen === Circle) {
         shapeChosen = new Circle();
         console.log('You have chosen Circle as your shape!'); }
         shapeChosen.setColor(shapeColorChosen);

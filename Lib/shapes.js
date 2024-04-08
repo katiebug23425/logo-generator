@@ -28,6 +28,6 @@ class Triangle extends Shape {
         return `<polygon points="150, 18 244, 182 56, 182" fill="${this.color}"/>`
     }
 
-}
+};
 
-module.exports = Library;
+module.exports = {Circle, Square, Triangle};
