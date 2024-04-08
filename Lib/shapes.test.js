@@ -1,4 +1,4 @@
-const Library = require('./Lib/shapes');
+const {Circle, Square, Triangle,} = require('./Lib/shapes');
 
 describe('Circle', () => {
     it('should render properly', () => {

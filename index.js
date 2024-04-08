@@ -78,12 +78,15 @@ function writeToFile(fileName, data) {
     if(UserShapeChosen === Square) {
         shapeChosen = new Square();
         console.log('You have chosen Square as your shape!');
-    } else if(UserShapeChosen === Triangle) {
+    } 
+    else if(UserShapeChosen === Triangle) {
         shapeChosen = new Triangle();
         console.log('You have chosen Triangle as your shape!');
-    } else if (UserShapeChosen === Circle) {
+    } 
+    else if (UserShapeChosen === Circle) {
         shapeChosen = new Circle();
         console.log('You have chosen Circle as your shape!'); }
+
         shapeChosen.setColor(shapeColorChosen);
 
         var Svg = new svgLogo();
