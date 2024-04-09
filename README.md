@@ -13,6 +13,7 @@ Invoke the 'node index.js' command from the terminal and answer the prompts. The
 ![test pass screenshot for SVG Logo generator application](./test%20pass%20Screenshot.png)
 
 ## Link to video walk though showing finished app:
+https://drive.google.com/file/d/1IPTJcit1OTbHe-wezvblRbVkwA5W0axf/view
 
 ## Credits
 
